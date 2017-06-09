@@ -1,0 +1,23 @@
+A tool born of necessity.
+
+First, install https://www.npmjs.com/package/npm-license-crawler
+
+Next, run it on all of your projects/services and output JSON:
+
+  npm-license-crawler --json ./{project_name}.json
+
+Finally, edit index.js, replace fe.js and be.js with the outputs, and:
+
+  node index.js > licenses.txt
+
+You'll have to track down some UNKNOWNs by hand, I'm afraid.
+
+Future TODO, if there's ever a need/interest:
+
+* Sniff for json files in the CWD instead of relying on manual entry
+* Add a real CLI
+* Customizable output
+* Hunt down licenses not added to package.json by looking for some files in github
+  (LICENSE, License, License.txt, LICENCE-MIT, etc.)
+* Hunt down licenses in README but not in LICENCE
+* Nag package owners to fix their code and normalize their values
